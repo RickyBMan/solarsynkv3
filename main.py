@@ -140,7 +140,7 @@ if BearerToken:
             
             # Connect and get settings entity response details
             try:
-                response = requests.get(url, headers=headers, timeout=5)
+                response = requests.get(url, headers=headers, timeout=5, verify=False)
                 if response.status_code == 200:
                     print(ConsoleColor.OKGREEN + f"URL exists (Status code: {response.status_code}) Settings may be processed and flushed." + ConsoleColor.ENDC)
                     SettingsExist = True
